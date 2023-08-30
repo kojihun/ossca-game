@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ossca.MainWindow"
+        Title="ossca-game">
+    <StackPanel Orientation="Vertical">
+        <Label Content="[OSCCA-가위바위보 게임]" FontSize="40" FontWeight="ExtraBold" HorizontalContentAlignment="Center" Margin="0 0 0 30"/>
+        <Label x:Name="gameResult" Content="가위, 바위, 보 중 한 개의 버튼을 클릭하세요!" FontSize="25" HorizontalContentAlignment="Center"/>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Computer" FontSize="10" FontWeight="Medium" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="computerResult" Width="150" Height="150" FontSize="25" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            </StackPanel>
+            <Label Content="VS" VerticalAlignment="Center" Margin="20"></Label>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Player" FontSize="10" FontWeight="Medium" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="playerResult" Width="150" Height="150" FontSize="25" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Click="BtnScissors_OnClick" x:Name="BtnScissors" Width="70" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" Content="가위" Margin="20, 0, 20, 0"></Button>
+            <Button Click="BtnRock_OnClick" x:Name="BtnRock" Width="70" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" Content="바위" Margin="20, 0, 20, 0"></Button>
+            <Button Click="BtnPaper_OnClick" x:Name="BtnPapper" Width="70" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" Content="보" Margin="20, 0, 20, 0"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
